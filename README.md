@@ -1,2 +1,2 @@
 # Reputation.com
-Generate meaning full words
+Generate meaningful words.
