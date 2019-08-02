@@ -42,7 +42,7 @@ public class Solution {
     }
     
    private List<String> transferfileDataToList() throws IOException
-   {
+    	{
    	File fileDescriptor;
 	FileReader fr;
 	BufferedReader br;
@@ -53,27 +53,26 @@ public class Solution {
 	String word=null;
 	 while((word=br.readLine())!=null)   
 	      {    	   
-	         fileData.add(word);	         	
-		  }
+	       fileData.add(word);	         	
+	       }
 	 br.close();
 	   
 	return fileData;   
-   }
+   	}
 	public List<String> wordsInDictionary( List<String> fileData,List<String> computedWords) throws IOException
    	 {
-		Iterator<String> iterator = computedWords.iterator();
-		List<String> meaningFullWords = new ArrayList<String>();
-		while(iterator.hasNext())
+	Iterator<String> iterator = computedWords.iterator();
+	List<String> meaningFullWords = new ArrayList<String>();
+	while(iterator.hasNext())
 		{
-			String computedWord = iterator.next();
-			if(fileData.contains(computedWord))
-				meaningFullWords.add(computedWord);    					
+		String computedWord = iterator.next();
+		if(fileData.contains(computedWord))
+			meaningFullWords.add(computedWord);    					
 		}
-    	
-		return meaningFullWords;    	
-   	 }
+	return meaningFullWords;    	
+   	}
     public static void main(String []args) throws IOException
-    {
+     	{
     	Scanner scan = new Scanner(System.in);
     	String Number = null;
     	System.out.println("Enter the number where each digit is greater than 1");
@@ -88,6 +87,6 @@ public class Solution {
     	else
     		System.out.println("No meaning full words present");
         scan.close();	    
-    }       
+   	}       
 }
 
